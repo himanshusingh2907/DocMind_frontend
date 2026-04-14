@@ -184,7 +184,7 @@ export function DashboardPage() {
         {headerRight}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div className="dm-stats-grid gap-3">
         <div className="dm-card-soft rounded-2xl p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(99,102,241,0.12)]">
           <div className="text-xs text-white/55">Total PDFs</div>
           <div className="mt-1 text-2xl font-semibold">{totalDocs}</div>
@@ -220,7 +220,7 @@ export function DashboardPage() {
       ) : null}
 
       {loading ? (
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-3">
+        <div className="dm-doc-grid gap-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="dm-card-soft rounded-2xl p-4">
               <div className="flex items-start justify-between gap-3">
@@ -244,7 +244,7 @@ export function DashboardPage() {
       ) : docs.length === 0 ? (
         <EmptyState onUpload={() => navigate('/upload')} />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="dm-doc-grid gap-3">
           {docs.map((d) => {
             return (
               <div

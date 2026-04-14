@@ -46,10 +46,10 @@ export function AuthPage() {
 
   return (
     <div className="min-h-screen bg-bg">
-      <div className="lg:grid lg:grid-cols-2 lg:min-h-screen">
+      <div className="dm-auth-layout min-h-screen">
 
         {/* ───── LEFT DECOR ───── */}
-        <section className="relative hidden lg:flex lg:flex-col overflow-hidden px-10 py-16">
+        <section className="dm-auth-hero relative flex flex-col overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/10 via-transparent to-transparent pointer-events-none" />
 
           <div className="relative z-10 max-w-md">
@@ -57,7 +57,7 @@ export function AuthPage() {
               <Sparkles className="h-4 w-4 text-indigo-200" />
               Gemini-powered RAG
             </div>
-            <h1 className="mt-6 text-5xl font-semibold tracking-tight text-white leading-tight">
+            <h1 className="dm-auth-title mt-6 font-semibold tracking-tight text-white leading-tight">
               Chat with your PDFs. Instantly.
             </h1>
             <p className="mt-3 text-base text-white/65">
@@ -65,7 +65,7 @@ export function AuthPage() {
             </p>
           </div>
 
-          <div className="relative z-10 mt-10 flex flex-col gap-4 max-w-sm">
+          <div className="relative z-10 mt-10 grid dm-auth-feature-grid gap-4">
             <div className="dm-card-soft dm-float dm-shine rounded-2xl p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_0_28px_rgba(99,102,241,0.18)]">
               <div className="flex items-center justify-between">
                 <div className="inline-flex items-center gap-2">
@@ -113,13 +113,13 @@ export function AuthPage() {
         </section>
 
         {/* ───── RIGHT FORM ───── */}
-        <section className="flex items-center justify-center p-6 lg:p-12">
-          <div className="w-full max-w-md">
+        <section className="dm-auth-form-wrap flex items-center justify-center">
+          <div className="w-full max-w-md dm-auth-form-inner">
             <div className="mb-7 flex items-center justify-center lg:justify-start">
               <Logo />
             </div>
 
-            <div className="dm-card rounded-2xl p-5 md:p-7">
+            <div className="dm-card dm-auth-card rounded-2xl">
               <div className="relative rounded-xl border border-white/10 bg-white/5 p-1">
                 <div
                   className={cn(
